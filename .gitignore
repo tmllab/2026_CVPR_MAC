@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Training outputs
+saved/
+checkpoints/
+contents/
+logs/
+wandb/
+lightning_logs/
+
+# Data and generated assets
+data/
+datasets/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.npz
+*.npy
+
+# Notebook runtime checkpoints
+.ipynb_checkpoints/
