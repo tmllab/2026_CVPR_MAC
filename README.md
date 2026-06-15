@@ -12,6 +12,10 @@ Paper page: https://openaccess.thecvf.com/content/CVPR2026F/html/Lin_Beyond_Opti
 
 Flow Matching (FM) is an effective framework for training a model to learn a vector field that transports samples from a source distribution to a target distribution. To train the model, early FM methods use random couplings, which often result in crossing paths and lead the model to learn non-straight trajectories that require many integration steps to generate high-quality samples. To address this, recent methods adopt Optimal Transport (OT) to construct couplings by minimizing geometric distances, which helps reduce path crossings. However, we observe that such geometry-based couplings do not necessarily align with the model's preferred trajectories, making it difficult to learn the vector field induced by these couplings, which prevents the model from learning straight trajectories. Motivated by this, we propose Model-Aligned Coupling (MAC), an effective method that matches training couplings based not only on geometric distance but also on alignment with the model's preferred transport directions based on its prediction error. MAC can be seamlessly integrated into existing frameworks, consistently enhancing their performance in few-step generation. Theoretically, we show that minimizing prediction error bounds trajectory curvature, thus promoting straighter transport paths. Extensive experiments show that MAC can improve the generation quality and efficiency of existing methods in few-step settings.
 
+## Tutorial
+
+We provide a tutorial [`mac_tutorial.ipynb`](mac_tutorial.ipynb) based on a 2D toy example to help readers quickly understand the idea of MAC. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tmllab/2026_CVPR_MAC/blob/main/mac_tutorial.ipynb)
+
 ## Repository Structure
 
 - `main.py`: training entry point.
